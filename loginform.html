@@ -15,11 +15,12 @@
 
     .form-container {
       justify-content: center;
-      background-color: light;
+      background-color: white;
       box-shadow: 300px;
     }
 
     h1 {
+      margin-top: 2px;
       text-align: center;
     }
     form {
@@ -31,6 +32,7 @@
       background-color: white;
 
       width: 400px;
+      height: 430px;
       text-align: left;
 
       object-fit: cover;
@@ -38,12 +40,15 @@
 
     .name-label {
       margin-top: 10px;
+      font-weight: bold;
     }
     .email-label {
       margin-top: 10px;
+      font-weight: bold;
     }
     .age-label {
       margin-top: 10px;
+      font-weight: bold;
     }
 
     .name-input {
@@ -51,40 +56,77 @@
       width: 400px;
       height: 27px;
       border: solid 1px;
+      font-size: 16px;
     }
     .email-input {
       margin-top: 10px;
       width: 400px;
       height: 27px;
       border: solid 1px;
+      font-size: 16px;
     }
     .age-input {
       margin-top: 10px;
       width: 400px;
       height: 27px;
       border: solid 1px;
+      font-size: 16px;
+    }
+    .submit-input {
+      margin-top: 10px;
+      width: 400px;
+      height: 27px;
+      border: solid 1px;
+      font-size: 16px;
+    }
+
+    select {
+      background-color: #009933;
+      color: #ffff00;
+      font-style: italic;
+      width: 400px;
+      height: 27px;
+      border: solid 1px;
+      margin-top: 10px;
+      font-size: 16px;
     }
   </style>
   <body>
     <div class="containerfluid col-12 col-sm-12">
       <div class="container form-container col-6 shadow-lg">
-        <form class="">
-          <h1>Styled Select Option Field in Form</h1>
-          <hr class="" />
-          <div class="name-label">
-            <label for="name">Name:</label>
-          </div>
-          <input class="name-input" type="text" id="name" name="name" />
-          <div class="email-label">
-            <label for="Email">Email:</label>
-          </div>
-          <input class="email-input" type="email" id="email" name="email" />
+        <div class="form-border-div">
+          <form class="">
+            <h1>Styled Select Option <br />Field in Form</h1>
+            <hr class="" />
+            <div class="name-label">
+              <label for="name">Name:</label>
+            </div>
+            <input class="name-input" type="text" id="name" name="name" />
+            <div class="email-label">
+              <label for="Email">Email:</label>
+            </div>
+            <input class="email-input" type="email" id="email" name="email" />
 
-          <div class="age-label">
-            <label for="age">Age:</label>
-          </div>
-          <input class="age-input" type="number" id="age" name="age" />
-        </form>
+            <div class="age-label">
+              <label for="age">Age:</label>
+            </div>
+            <select class="age-dropdown" name="age-select" id="age-select">
+              <option value="option0">--- Choose Age From Here ---</option>
+              <option value="option1 ">Below 18 years</option>
+              <option value="option2">Between 18-28 years</option>
+              <option value="option3">Between 25-40 years</option>
+              <option value="option4">Between 40-60 years</option>
+              <option value="option5">Above 60 years</option>
+            </select>
+
+            <input
+              class="submit-input"
+              type="submit"
+              id="submit"
+              name="submit"
+            />
+          </form>
+        </div>
       </div>
     </div>
   </body>
